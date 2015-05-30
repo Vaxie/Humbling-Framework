@@ -36,14 +36,6 @@ nav {
 		&, nav a:visited, nav a:active {
 			color: $nav-font-color;
 		}
-		.dropdown{
-			position: relative;
-			background:{
-				color: $nav-active;
-			}
-			top: 0;
-			left: 0;
-		}
 	}
 }
 

@@ -1,10 +1,3 @@
-﻿@mixin transition ($duration){
-	-webkit-transition: all $duration linear;
-	-moz-transition: all $duration linear;
-	-ms-transition: all $duration linear;
-	-o-transition: all $duration linear;
-	transition: all $duration linear;
-}
 
 $grid-columns: 12;
 $grid-gutter-width : 30px;
