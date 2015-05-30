@@ -1,6 +1,3 @@
-# Humbling-Framework 
-# By @Xayer96
-
 Humbling-Framework 
 =========
 By @Xayer96
