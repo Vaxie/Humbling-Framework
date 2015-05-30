@@ -1,0 +1,37 @@
+﻿@mixin transition ($duration){
+	-webkit-transition: all $duration linear;
+	-moz-transition: all $duration linear;
+	-ms-transition: all $duration linear;
+	-o-transition: all $duration linear;
+	transition: all $duration linear;
+}
+
+@mixin container-fixed($gutter: $grid-gutter-width) {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: ($gutter / 2);
+	padding-right: ($gutter / 2);
+}
+
+@mixin generate-columns($container-width, $number-cols, $i){
+	@while $i < $number-cols + 1{
+
+  //$container-width -> 1200px
+  //$number-cols -> 12
+  //$i -> 8
+
+  .col-#{$i} {
+			$single-width: percentage($container-width / $number-cols); // 1200 / 800 = 100
+			width: $i * $single-width; // 800px
+			$i: $i + 1;
+		}
+	}
+}
+
+@mixin make-grid($container-width) {
+	@media(min-width: $container-width) {
+		width: $container-width;
+
+		@mixin generate-columns($container-width, $grid-columns);
+	}
+}

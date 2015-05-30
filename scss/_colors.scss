@@ -1,0 +1,19 @@
+﻿/* --INSERT THEME COLORS HERE-- */
+$black: #000;
+$white: #FFF;
+$orange: #FF870F;
+$blue: #1E8BC3;
+$light-blue: #22A7F0;
+
+//-------//
+
+/* FONT COLORS */
+$font-color: $black;
+$link-color: $orange;
+/* COLORS FOR THE BACKGROUND SURROUNDING THE CONTAINER */
+$primary-bg-color: $white;
+/* COLORS OF THE NAVIGATION BAR */
+$nav-color: $blue;
+$nav-font-color: $white;
+$nav-hover: lighten($nav-color,5);
+$nav-active: darken($nav-color,10);

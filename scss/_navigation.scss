@@ -1,0 +1,87 @@
+﻿/* -----------------------SMARTPHONE ------------------- */
+nav,.nav,nav.container {
+	background-color: $nav-color;
+	color: $nav-font-color;
+	display: block;
+	flex-direction: column;
+	width: 100%;
+}
+
+.nav.nav-reverse,nav.container.nav-reverse,nav.container.nav-reverse {
+	flex-direction: column-reverse;
+}
+
+.nav .trigger {
+	display: block;
+	float: right;
+}
+
+.nav .trigger:after {
+	clear:both;
+}
+
+nav {
+	a {
+		@include transition(.25s);
+		width: 100%;
+		text-decoration: none;
+		text-align: center;
+		background-color: $nav-color;
+		display: inline-block;
+		padding: 1.5%;
+		font-size: $nav-font-size;
+		border-collapse:collapse;
+		height: 100%;
+		position: relative;
+		&, nav a:visited, nav a:active {
+			color: $nav-font-color;
+		}
+		.dropdown{
+			position: relative;
+			background:{
+				color: $nav-active;
+			}
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+nav.container a {
+	padding: 2.5%;
+}
+nav a:hover,.nav a:hover {
+	background-color: $nav-hover;
+}
+
+nav a.active:hover,.nav a.active:hover {
+	background-color: lighten($nav-active,5);
+}
+
+nav a.active {
+	background-color: $nav-active;
+}
+
+nav.closed a {
+	display: none;
+}
+
+/* -----------------------TABLET ------------------- */
+@media (min-width:768px){
+	
+	.nav a {
+		width: auto;
+		display: inline-block;
+	}
+	nav,.nav,nav.container {
+		flex-direction: row;
+		display: flex;
+	}
+	.nav.nav-reverse,nav.container.nav-reverse,nav.container.nav-reverse,nav.nav-reverse {
+		flex-direction: row-reverse;
+	}
+
+	.nav .trigger {
+		display: none;
+	}
+}
